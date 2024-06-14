@@ -1,0 +1,17 @@
+---
+# EDGEX NODE
+- name: Hello world on main node
+  hosts: main
+  become: true
+  tasks:
+    - name: print helloworld
+      ansible.builtin.debug:
+        msg: hello world
+
+- name: Hello world on main node
+  hosts: cluster_nodes
+  become: true
+  tasks:
+    - name: print helloworld
+      ansible.builtin.debug:
+        msg: hello world
